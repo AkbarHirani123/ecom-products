@@ -4,7 +4,9 @@
   "description": "E-Com Products demo with React, redux, mongo and Bulma CSS framework",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "build": "rm -rf dist && babel backend -d dist",
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
   },
   "author": "Akbar Hirani",
   "license": "ISC",
@@ -16,8 +18,16 @@
     "url": "https://github.com/AkbarHirani123/ecom-products/issues"
   },
   "homepage": "https://github.com/AkbarHirani123/ecom-products#readme",
+  "engine": {
+    "node": "12.4.0", 
+    "npm": "6.9.0"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.27"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",

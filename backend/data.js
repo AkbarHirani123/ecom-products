@@ -8,7 +8,8 @@ export default {
             category: "Jersey",
             team: "New York Giants",
             rating: 4.5,
-            numOfReviews: 20
+            numOfReviews: 20,
+            quantityInStock: 6
         },
         {
             _id: "2",
@@ -18,7 +19,8 @@ export default {
             category: "Masks",
             team: "Green Bay Packers",
             rating: 5,
-            numOfReviews: 2
+            numOfReviews: 2,
+            quantityInStock: 5
         },
         {
             _id: "3",
@@ -28,7 +30,8 @@ export default {
             category: "Masks",
             team: "New York Giants",
             rating: 2.5,
-            numOfReviews: 5
+            numOfReviews: 5,
+            quantityInStock: 0
         },
         {
             _id: "4",
@@ -38,7 +41,8 @@ export default {
             category: "Jersey",
             team: "Green Bay Packers",
             rating: 4.8,
-            numOfReviews: 200
+            numOfReviews: 200,
+            quantityInStock: 3
         },
         {
             _id: "5",
@@ -48,7 +52,8 @@ export default {
             category: "Hats",
             team: "Green Bay Packers",
             rating: 3.8,
-            numOfReviews: 100
+            numOfReviews: 100,
+            quantityInStock: 2
         }
     ]
 }
