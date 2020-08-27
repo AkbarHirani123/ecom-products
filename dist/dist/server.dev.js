@@ -2,8 +2,6 @@
 
 var _express = _interopRequireDefault(require("express"));
 
-var _data = _interopRequireDefault(require("./data"));
-
 var _config = _interopRequireDefault(require("./config"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
