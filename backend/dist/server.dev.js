@@ -2,6 +2,8 @@
 
 var _express = _interopRequireDefault(require("express"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _config = _interopRequireDefault(require("./config"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
@@ -34,9 +36,9 @@ app.use("/api/orders", _orderRoute["default"]);
 app.use("/api/config/paypal", function (req, res) {
   res.send(_config["default"].PAYPAL_CLIENT_ID);
 });
-app.use(_express["default"]["static"](path.join(__dirname, '/../frontend/build')));
+app.use(_express["default"]["static"](_path["default"].join(__dirname, '/../frontend/build')));
 app.get('*', function (req, res) {
-  res.sendFile(path.join("".concat(__dirname, "/../frontend/build/index.html")));
+  res.sendFile(_path["default"].join("".concat(__dirname, "/../frontend/build/index.html")));
 });
 app.listen(_config["default"].PORT, function () {
   console.log('Server started at http://localhost:5000');
