@@ -50,7 +50,14 @@ app.use("/api/config/paypal", function (req, res) {
 // app.get("/api/products", (req, res) => {
 //     res.send(data.products);
 // });
+// app.listen(5000, () => {
+//     console.log("Server started at https://localhost:5000");
+// });
 
-app.listen(5000, function () {
-  console.log("Server started at https://localhost:5000");
+app.use(_express["default"]["static"](path.join(__dirname, '/../frontend/build')));
+app.get('*', function (req, res) {
+  res.sendFile(path.join("".concat(__dirname, "/../frontend/build/index.html")));
+});
+app.listen(_config["default"].PORT, function () {
+  console.log('Server started at http://localhost:5000');
 });

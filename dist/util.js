@@ -9,29 +9,29 @@ var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 
 var _config = _interopRequireDefault(require("./config"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var getToken = function getToken(user) {
-  return _jsonwebtoken["default"].sign({
+const getToken = user => {
+  return _jsonwebtoken.default.sign({
     _id: user._id,
     name: user.name,
     email: user.email,
     isAdmin: user.isAdmin
-  }, _config["default"].JWT_SECRET, {
+  }, _config.default.JWT_SECRET, {
     expiresIn: '48h'
   });
 };
 
 exports.getToken = getToken;
 
-var isAuth = function isAuth(req, res, next) {
+const isAuth = (req, res, next) => {
   //is authenticated
-  var token = req.headers.authorization;
+  const token = req.headers.authorization;
 
   if (token) {
-    var onlyToken = token.slice(6, token.length);
+    const onlyToken = token.slice(6, token.length);
 
-    _jsonwebtoken["default"].verify(onlyToken, _config["default"].JWT_SECRET, function (err, decode) {
+    _jsonwebtoken.default.verify(onlyToken, _config.default.JWT_SECRET, (err, decode) => {
       if (err) {
         return res.status(401).send({
           message: 'Invalid Token'
@@ -51,7 +51,7 @@ var isAuth = function isAuth(req, res, next) {
 
 exports.isAuth = isAuth;
 
-var isAdmin = function isAdmin(req, res, next) {
+const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     return next();
   }
