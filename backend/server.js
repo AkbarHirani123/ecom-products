@@ -16,7 +16,6 @@ mongoose.connect(mongodbUrl, {
 const app = express();
 app.use(bodyParser.json());
 
-//////// Use data from database
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
@@ -24,23 +23,6 @@ app.use("/api/config/paypal", (req, res) => {
     res.send(config.PAYPAL_CLIENT_ID);
 });
 
-//////// Not using data from server ANYMORE
-// app.get("/api/products/:id", (req, res) => {
-//     const productId = req.params.id;
-//     const product = data.products.find( x => x._id === productId);
-//     if(product)
-//         res.send(product);
-//     else
-//         res.status(404).send({msg: "Product Not Found."});
-// });
-
-// app.get("/api/products", (req, res) => {
-//     res.send(data.products);
-// });
-
-// app.listen(5000, () => {
-//     console.log("Server started at https://localhost:5000");
-// });
 app.use(express.static(path.join(__dirname, '/../frontend/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));

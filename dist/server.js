@@ -25,29 +25,14 @@ _mongoose.default.connect(mongodbUrl, {
 }).catch(error => console.log(error.reason));
 
 const app = (0, _express.default)();
-app.use(_bodyParser.default.json()); //////// Use data from database
+app.use(_bodyParser.default.json());
 
 app.use("/api/users", _userRoute.default);
 app.use("/api/products", _productRoute.default);
 app.use("/api/orders", _orderRoute.default);
 app.use("/api/config/paypal", (req, res) => {
   res.send(_config.default.PAYPAL_CLIENT_ID);
-}); //////// Not using data from server ANYMORE
-// app.get("/api/products/:id", (req, res) => {
-//     const productId = req.params.id;
-//     const product = data.products.find( x => x._id === productId);
-//     if(product)
-//         res.send(product);
-//     else
-//         res.status(404).send({msg: "Product Not Found."});
-// });
-// app.get("/api/products", (req, res) => {
-//     res.send(data.products);
-// });
-// app.listen(5000, () => {
-//     console.log("Server started at https://localhost:5000");
-// });
-
+});
 app.use(_express.default.static(path.join(__dirname, '/../frontend/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
