@@ -1,0 +1,43 @@
+.cart-list-container
+
+    > div
+        border-bottom: 1px solid hsl(0, 0%, 86%)
+        padding: 20px 0
+
+        img
+            max-width: 120px
+
+        &:first-child
+            border-top: 1px solid hsl(0, 0%, 86%)
+
+    > div.empty
+        border: none
+    .field-label
+        flex-grow: 0
+
+.review-order-details
+    .cart-list-container .field-label
+        flex-grow: 1
+
+    .columns.order-details .column > .container
+        background: #F2F6F5
+        padding: 30px 20px
+        border-radius: 5px
+        margin-bottom: 40px
+        border: 1px solid #dbdbdb
+
+        &.color-background table
+            margin: auto
+
+            tr 
+                td
+                    padding: 0.3em 0
+
+                td:first-of-type
+                    padding-right: 2em
+                
+                td:not(:first-of-type)
+                    text-align: right
+                
+                td[colspan="2"]
+                    padding: 0

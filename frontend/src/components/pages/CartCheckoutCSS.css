@@ -1,0 +1,56 @@
+.cart-list-container > div {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 20px 0;
+}
+
+.cart-list-container > div img {
+  max-width: 120px;
+}
+
+.cart-list-container > div:first-child {
+  border-top: 1px solid #dbdbdb;
+}
+
+.cart-list-container > div.empty {
+  border: none;
+}
+
+.cart-list-container .field-label {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.review-order-details .cart-list-container .field-label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.review-order-details .columns.order-details > .column > .container {
+  background: #F2F6F5;
+  padding: 30px 20px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  border: 1px solid #dbdbdb;
+}
+
+.review-order-details .columns.order-details > .column > .container.color-background table {
+  margin: auto;
+}
+
+.review-order-details .columns.order-details > .column > .container.color-background table tr td {
+  padding: 0.3em 0;
+}
+
+.review-order-details .columns.order-details > .column > .container.color-background table tr td:first-of-type {
+  padding-right: 2em;
+}
+
+.review-order-details .columns.order-details > .column > .container.color-background table tr td:not(:first-of-type) {
+  text-align: right;
+}
+
+.review-order-details .columns.order-details > .column > .container.color-background table tr td[colspan="2"] {
+  padding: 0;
+}

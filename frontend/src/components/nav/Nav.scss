@@ -1,0 +1,52 @@
+@import '../../css-config.scss';
+
+.navbar.header{
+    background-color: #383838
+}
+.navbar.header a.hover{
+    color: gray
+}
+.navbar-brand a{
+    color: #fff;
+    font-weight: bold
+}
+
+.navbar-brand a.navbar-item:focus, .navbar-brand a.navbar-item:hover{
+    background-color: $primary
+}
+
+a.r-item{
+    color: #c1c1c1;
+    padding: 0.5rem 1.75rem
+}
+
+a.r-item:hover{
+    background-color: #383838;
+    color: gray
+}
+
+.navbar-toggle span, .navbar-burger{
+    background-color: #c1c1c1
+}
+
+a.r-item:not(.is-arrowless)::after{
+    border-color: $primary
+}
+
+footer{
+    background-color: $primary !important;
+    color: #fff
+}
+
+footer .icon{
+    color: #fff;
+    margin-left: 20px
+}
+
+footer .container{
+    padding: 3rem 1.5rem 6rem
+}
+
+footer a{
+    color:#383838
+}

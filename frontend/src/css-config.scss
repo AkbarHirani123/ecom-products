@@ -1,0 +1,44 @@
+$primary: #1EC9AC !default;
+
+$tablet: 769px !default;
+
+$desktop: 1000px !default;
+
+$widescreen: 1192px !default;
+
+$fullhd: 1384px !default;
+
+$section-padding: 1rem 0rem !default;
+
+$section-padding-medium: 2.5rem 0rem !default;
+
+$section-padding-large: 5rem 0rem !default;
+
+$link: #1EC9AC !default;
+
+$hr-background-color: #dbdbdb !default;
+
+$hr-height: 1px !default;
+
+$hr-margin: 1rem  0 !default;
+
+$notification-padding: 1.25rem 1.5rem 1.25rem 1.5rem !default;
+
+.is-primary{
+    color: #1EC9AC
+}
+
+a.is-primary:hover {
+    color: #09dcb8;
+    text-decoration: underline
+}
+.color-background{
+    background: #edf3f2 !important;
+    padding: 30px
+}
+.table td, .table th {
+    vertical-align: middle !important;
+}
+.has-background-none {
+    background-color: transparent !important;
+}
