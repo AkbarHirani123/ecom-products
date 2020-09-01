@@ -51,7 +51,7 @@ function Home(props) {
                     <form onSubmit={handleSubmit}>
                         <div className="field is-grouped">
                             <div className="control is-expanded">
-                                <input className="input is-primary is-medium" type="text" placeholder="Prroduct name" name="searchKeyword" onChange={(e) => setSearchKeyword(e.target.value)} />
+                                <input className="input is-primary is-medium" type="text" placeholder="Product name" name="searchKeyword" onChange={(e) => setSearchKeyword(e.target.value)} />
                             </div>
                             <div className="control">
                                 <button type="submit" className="button is-medium is-link">
